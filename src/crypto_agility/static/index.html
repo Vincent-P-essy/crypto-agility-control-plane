@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Crypto Agility Control Plane</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">EVIDENCE-DRIVEN MIGRATION</p>
+      <h1>Crypto Agility<br><span>Control Plane</span></h1>
+      <p class="lede">Inventory cryptography, expose HNDL risk, and measure the path from classical TLS to real hybrid negotiation.</p>
+      <div id="health" class="status">connecting…</div>
+    </header>
+    <main>
+      <section class="panel distinctions">
+        <h2>Three profiles. No blurred claims.</h2>
+        <div class="profile-grid">
+          <article><strong>01</strong><h3>Standard TLS</h3><p>TLS 1.3 with X25519 as the classical baseline.</p></article>
+          <article><strong>02</strong><h3>True hybrid TLS</h3><p>Wire-observed X25519MLKEM768 key_share in ServerHello.</p></article>
+          <article><strong>03</strong><h3>Application PQC</h3><p>Real ML-KEM and ML-DSA operations, explicitly not TLS.</p></article>
+        </div>
+      </section>
+      <section class="two-column">
+        <article class="panel">
+          <div class="section-title"><h2>CBOM inventory</h2><button id="refresh-cboms">Refresh</button></div>
+          <div id="cboms" class="empty">No stored CBOM yet.</div>
+        </article>
+        <article class="panel">
+          <div class="section-title"><h2>Measured benchmarks</h2><button id="run-benchmark">Run 25×</button></div>
+          <div id="benchmark-state" class="notice">Requires OpenSSL 3.5 and pinned liboqs 0.16.0.</div>
+          <div id="benchmarks" class="empty">No benchmark stored yet.</div>
+        </article>
+      </section>
+      <section class="panel" id="detail-panel">
+        <h2>Evidence detail</h2>
+        <div id="detail" class="empty">Select an artifact to inspect its measured data.</div>
+      </section>
+    </main>
+    <footer>Local-first control plane · API schema at <a href="/api/docs">/api/docs</a></footer>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

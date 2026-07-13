@@ -1,0 +1,88 @@
+name: crypto-agility-lab
+
+x-runtime-hardening: &runtime-hardening
+  read_only: true
+  cap_drop:
+    - ALL
+  security_opt:
+    - no-new-privileges:true
+  init: true
+  restart: unless-stopped
+
+services:
+  control-plane:
+    <<: *runtime-hardening
+    build:
+      context: .
+    image: crypto-agility-control-plane:local
+    command:
+      - api
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8080"
+      - --state-dir
+      - /state
+      - --allowed-root
+      - /app/fixtures
+      - --oqs-install-path
+      - /opt/oqs
+    ports:
+      - "127.0.0.1:${CONTROL_PLANE_PORT:-18080}:8080"
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,mode=1777
+      - /state:rw,noexec,nosuid,nodev,mode=0700,uid=10001,gid=10001
+
+  classic-service:
+    <<: *runtime-hardening
+    image: crypto-agility-control-plane:local
+    depends_on:
+      control-plane:
+        condition: service_healthy
+    command:
+      - demo-server
+      - --mode
+      - classic
+      - --host
+      - 0.0.0.0
+      - --port
+      - "9443"
+      - --ephemeral-certificate
+    ports:
+      - "127.0.0.1:${CLASSIC_SERVICE_PORT:-19443}:9443"
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,mode=1777
+    healthcheck:
+      test: ["CMD", "crypto-agility", "demo-client", "--mode", "classic", "--host", "localhost", "--port", "9443", "--insecure"]
+      interval: 15s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+
+  hybrid-service:
+    <<: *runtime-hardening
+    image: crypto-agility-control-plane:local
+    depends_on:
+      control-plane:
+        condition: service_healthy
+    command:
+      - demo-server
+      - --mode
+      - hybrid
+      - --host
+      - 0.0.0.0
+      - --port
+      - "9444"
+      - --ephemeral-certificate
+      - --oqs-install-path
+      - /opt/oqs
+    ports:
+      - "127.0.0.1:${HYBRID_SERVICE_PORT:-19444}:9444"
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,mode=1777
+    healthcheck:
+      test: ["CMD", "crypto-agility", "demo-client", "--mode", "hybrid", "--host", "localhost", "--port", "9444", "--insecure", "--oqs-install-path", "/opt/oqs"]
+      interval: 15s
+      timeout: 5s
+      start_period: 5s
+      retries: 3

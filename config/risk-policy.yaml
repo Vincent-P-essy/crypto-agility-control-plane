@@ -1,0 +1,15 @@
+policy_version: "1.0"
+reviewed_at: "2026-07-13"
+transition_target_year: 2030
+hndl_threshold_years: 5
+minimum_rsa_bits: 2048
+exposure_weights:
+  local: 0
+  internal: 7
+  partner: 11
+  internet: 16
+severity_thresholds:
+  critical: 80
+  high: 60
+  medium: 35
+  low: 0

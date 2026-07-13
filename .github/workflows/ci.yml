@@ -1,0 +1,94 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_FROZEN: "1"
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990 # v8.3.2
+        with:
+          version: "0.11.28"
+          enable-cache: true
+      - run: uv python install 3.12.13
+      - run: uv sync --extra dev
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run mypy
+      - run: uv run pytest -m "not integration" --cov --cov-report=term-missing --cov-fail-under=60
+      - run: uv build
+
+  native-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990 # v8.3.2
+        with:
+          version: "0.11.28"
+          enable-cache: true
+      - run: uv python install 3.12.13
+      - run: uv sync --extra dev
+      - run: ./scripts/build-liboqs.sh .local/oqs
+      - name: Validate real primitives and generate evidence
+        env:
+          OQS_INSTALL_PATH: ${{ github.workspace }}/.local/oqs
+          LD_LIBRARY_PATH: ${{ github.workspace }}/.local/oqs/lib
+        run: |
+          uv run pytest --cov --cov-report=term-missing --cov-fail-under=75
+          mkdir -p reports/generated
+          uv run crypto-agility benchmark --iterations 100 --out reports/generated/ci-benchmark.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: cryptographic-benchmark-${{ github.sha }}
+          path: reports/generated/ci-benchmark.*
+          if-no-files-found: error
+          retention-days: 14
+
+  container:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Validate Compose deployment
+        run: docker compose -f compose.yaml config --quiet
+      - run: docker build --pull --tag crypto-agility-control-plane:ci .
+      - name: Container smoke test
+        run: |
+          docker run --detach --rm --name crypto-agility-ci \
+            --read-only --cap-drop=ALL --security-opt=no-new-privileges \
+            --tmpfs /tmp:size=32m,noexec,nosuid,nodev,mode=1777 \
+            --tmpfs /state:size=32m,noexec,nosuid,nodev,mode=0700,uid=10001,gid=10001 \
+            -p 127.0.0.1:18080:8080 crypto-agility-control-plane:ci
+          trap 'docker stop crypto-agility-ci >/dev/null 2>&1 || true' EXIT
+          healthy=0
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:18080/healthz; then
+              healthy=1
+              break
+            fi
+            sleep 1
+          done
+          if [ "$healthy" -ne 1 ]; then
+            docker logs crypto-agility-ci
+            exit 1
+          fi
+          curl --fail --silent --show-error \
+            --request POST http://127.0.0.1:18080/api/v1/scans \
+            --header 'content-type: application/json' \
+            --data '{"local_path":"/app/fixtures/inventory","confidentiality_years":12}'

@@ -1,0 +1,11 @@
+.git
+.venv
+.local
+.state
+.pytest_cache
+.ruff_cache
+.mypy_cache
+__pycache__
+reports/generated
+lab-state
+*.log

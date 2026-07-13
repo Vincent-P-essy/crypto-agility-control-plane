@@ -1,0 +1,11 @@
+service: payment-fixture
+transport:
+  minimum_version: TLSv1.2
+  key_agreement: ECDH
+signing:
+  certificate_algorithm: RSA
+  key_bits: 2048
+future_profile:
+  tls_group: X25519MLKEM768
+  application_kem: ML-KEM-768
+  application_signature: ML-DSA-65

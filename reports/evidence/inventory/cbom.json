@@ -1,0 +1,1095 @@
+{
+  "assessments": [
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-1cb89ca10dfb85bb1360aa8f",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 15 (acceptable)",
+        "internal exposure: +7"
+      ],
+      "score": 22,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-220302f11677bb0224d522ef",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 35 (context-dependent)",
+        "internal exposure: +7"
+      ],
+      "score": 42,
+      "severity": "medium"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-258dfa039da11219844d1f89",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 8 (hybrid-transition)",
+        "internal exposure: +7"
+      ],
+      "score": 15,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-25a28d91fa7ae9352312cb40",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 100 (broken)",
+        "internal exposure: +7"
+      ],
+      "score": 100,
+      "severity": "critical"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-31db6dcfff8c6564c421dfcf",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 35 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 62,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-4a662e022abdcc03f0c5b643",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 38 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 65,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-4b6595ec18b3af2c5aa83df3",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 35 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 62,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-512d430e561cd9ae204d0dc4",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 5 (inventory-only)",
+        "internal exposure: +7"
+      ],
+      "score": 12,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-59942782605b0fcbdcce0dcc",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 95 (deprecated)",
+        "internal exposure: +7"
+      ],
+      "score": 100,
+      "severity": "critical"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-5c89578c5c7bd296937798ec",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 28 (context-dependent)",
+        "internal exposure: +7"
+      ],
+      "score": 35,
+      "severity": "medium"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-7f4a29bbccd058d61cd89eaa",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 6 (pqc-standard)",
+        "internal exposure: +7"
+      ],
+      "score": 13,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-840aec07bc43b39bfd5294a4",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 40 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 67,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-8d68bfc1546590b632eb0eb9",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 6 (pqc-standard)",
+        "internal exposure: +7"
+      ],
+      "score": 13,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-8e11fb768b7a7ca7fcb1f3cd",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 85 (deprecated)",
+        "internal exposure: +7"
+      ],
+      "score": 92,
+      "severity": "critical"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-9081e0316f1dba0db126e063",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 48 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 75,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-a79e26807b6ef69e6c2f6528",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 5 (acceptable)",
+        "internal exposure: +7"
+      ],
+      "score": 12,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-ad498a9a6c00d98af8cba082",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 5 (inventory-only)",
+        "internal exposure: +7"
+      ],
+      "score": 12,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-afc045b89bf4c0b148ba81e3",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 38 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 65,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-b4a08e52a28a89a27da64c16",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 38 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 65,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-b8a4ed4dcc28ccfc50493154",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 5 (acceptable)",
+        "internal exposure: +7"
+      ],
+      "score": 12,
+      "severity": "low"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-f3a8b650e084d8ad5bd98fce",
+      "hndl_relevant": true,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 38 (transition)",
+        "internal exposure: +7",
+        "HNDL planning horizon ends in 2038, at/after transition target 2030: +20"
+      ],
+      "score": 65,
+      "severity": "high"
+    },
+    {
+      "confidentiality_end_year": 2038,
+      "finding_id": "finding-fbff1b06d57a68c9cb991e3a",
+      "hndl_relevant": false,
+      "policy_version": "1.0",
+      "reasons": [
+        "registry base risk: 35 (context-dependent)",
+        "internal exposure: +7"
+      ],
+      "score": 42,
+      "severity": "medium"
+    }
+  ],
+  "document_id": "urn:cbom:sha256:26f6c19b2816a265a21f88ef6186dbf2e6017ccfc2c0d8d1c32c0cf6c15726ba",
+  "findings": [
+    {
+      "algorithm": "AES-128",
+      "asset_id": "asset-b6245272c06bef7a05763959",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:6b0ba8d85a93de1d5bd57d7cd0fde49b28fb1fbdfac83da0ec00f5ed4ecf88c3",
+          "locator": "line:2",
+          "source": "application.env.example"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-1cb89ca10dfb85bb1360aa8f",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "TLS-1.2",
+      "asset_id": "asset-d1dbb67fab6e778d880118cb",
+      "asset_kind": "protocol",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:02420f582aaa14185cf10efd423be94240619f26a622f85c0c6ed4f21c7977aa",
+          "locator": "line:3",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-220302f11677bb0224d522ef",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "TLS-1.2",
+      "use": "transport protocol"
+    },
+    {
+      "algorithm": "X25519MLKEM768",
+      "asset_id": "asset-9347c11a76402fd349ae57d1",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:e159b85aed7f6310c4c4cdc7c8446e63259f2e78e2334b647b2e10f4f74b5955",
+          "locator": "line:9",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-258dfa039da11219844d1f89",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "DES",
+      "asset_id": "asset-ca66be1c8f7e101324f629c2",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:ae4615484c0e57564583ae0bdfc179b09ebe46f3201cf3f53bae67ebdbee8a8e",
+          "locator": "line:4",
+          "source": "nginx.conf"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-25a28d91fa7ae9352312cb40",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "ED25519",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:c96a8f0f8cb25e9ac7a8a0e040c10dc010c7c0aef38f2c14ac729af7dc4e0c96",
+          "locator": "line:2",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-31db6dcfff8c6564c421dfcf",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "SSH-2",
+      "use": "ssh algorithm configuration"
+    },
+    {
+      "algorithm": "ECDH",
+      "asset_id": "asset-9347c11a76402fd349ae57d1",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:6251db47d61afdb18896ce742bc03ba05d6c95c4ead1ed1277498eee8e21a7f6",
+          "locator": "line:4",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-4a662e022abdcc03f0c5b643",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "TLS",
+      "use": "tls key agreement"
+    },
+    {
+      "algorithm": "X25519",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:84681cab1738b26f018fa6190a45c2f19e0d6c885f61d02d17cfa1219a3afae6",
+          "locator": "line:3",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-4b6595ec18b3af2c5aa83df3",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "SSH-2",
+      "use": "ssh algorithm configuration"
+    },
+    {
+      "algorithm": "LIBRARY-CRYPTOGRAPHY",
+      "asset_id": "asset-73643e9447722a3507ef21bf",
+      "asset_kind": "library",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.9,
+          "detector": "dependency-manifest",
+          "excerpt_hash": "sha256:42c733f65e2a8317f212198720af6316b5254a7ff47fc2c54ad20dd5a95f455d",
+          "locator": "line:1",
+          "source": "requirements.txt"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-512d430e561cd9ae204d0dc4",
+      "key_bits": null,
+      "library_version": "46.0.0",
+      "metadata": {
+        "package": "cryptography"
+      },
+      "protocol_version": null,
+      "use": "cryptographic library dependency"
+    },
+    {
+      "algorithm": "TLS-1.0",
+      "asset_id": "asset-a4daa879d3ed61a0ffcf87c0",
+      "asset_kind": "protocol",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:ddcd83aab5d41455b5c029758fceb29539ee30ae2a612cb6ed4ebbb8bbb62d20",
+          "locator": "line:3",
+          "source": "nginx.conf"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-59942782605b0fcbdcce0dcc",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "TLS-1.0",
+      "use": "transport protocol"
+    },
+    {
+      "algorithm": "HS256",
+      "asset_id": "asset-b6245272c06bef7a05763959",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:9e24a683da9916e72fe030fc61e5ccd3196434f42a16c72123845e5578e770ee",
+          "locator": "line:1",
+          "source": "application.env.example"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-5c89578c5c7bd296937798ec",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "JWT",
+      "use": "jwt signature"
+    },
+    {
+      "algorithm": "ML-DSA-65",
+      "asset_id": "asset-9347c11a76402fd349ae57d1",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:2e6fa29d6bf13eabb0406645db99bb8e690b8a0ddefd2a526f5a337e0b4525c9",
+          "locator": "line:11",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-7f4a29bbccd058d61cd89eaa",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "RS256",
+      "asset_id": "asset-fd564d0269fec7bc2c0f71f8",
+      "asset_kind": "jwt",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 1.0,
+          "detector": "jwt-header-only",
+          "excerpt_hash": "sha256:17edfe35c3f96c44893d35214058a62713973277328e7c858aba00d7e1a86cd8",
+          "locator": "line:1",
+          "source": "sample.jwt"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-840aec07bc43b39bfd5294a4",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {
+        "header_fields": [
+          "alg",
+          "kid",
+          "typ"
+        ],
+        "payload_inspected": false,
+        "token_fingerprint": "sha256:13fd40d8e99408a790fb1afc172f2d084c6f028caa25aa1fd5c81a370c73820a"
+      },
+      "protocol_version": "JWT",
+      "use": "jwt signature"
+    },
+    {
+      "algorithm": "ML-KEM-768",
+      "asset_id": "asset-9347c11a76402fd349ae57d1",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:8da37de212c122904f90698291c011e2037dce141c9e713c856eb17a523fc246",
+          "locator": "line:10",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-8d68bfc1546590b632eb0eb9",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "3DES",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:8c918310081793a5e6fc9d2732db34f5d32a7afb497d423b7ad55b9a5fc53f74",
+          "locator": "line:4",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-8e11fb768b7a7ca7fcb1f3cd",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "DH",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:84681cab1738b26f018fa6190a45c2f19e0d6c885f61d02d17cfa1219a3afae6",
+          "locator": "line:3",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-9081e0316f1dba0db126e063",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "SSH-2",
+      "use": "ssh algorithm configuration"
+    },
+    {
+      "algorithm": "AES-256",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:8c918310081793a5e6fc9d2732db34f5d32a7afb497d423b7ad55b9a5fc53f74",
+          "locator": "line:4",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-a79e26807b6ef69e6c2f6528",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "LIBRARY-PYJWT",
+      "asset_id": "asset-73643e9447722a3507ef21bf",
+      "asset_kind": "library",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.9,
+          "detector": "dependency-manifest",
+          "excerpt_hash": "sha256:bc8cac21dd41a7d34513c8ba15c3447e7a8997edbeaababaa1b296e2a73377e8",
+          "locator": "line:2",
+          "source": "requirements.txt"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-ad498a9a6c00d98af8cba082",
+      "key_bits": null,
+      "library_version": "2.10.1",
+      "metadata": {
+        "package": "pyjwt"
+      },
+      "protocol_version": null,
+      "use": "cryptographic library dependency"
+    },
+    {
+      "algorithm": "RSA",
+      "asset_id": "asset-95fc3d1eeb02aeb293e31f32",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:c96a8f0f8cb25e9ac7a8a0e040c10dc010c7c0aef38f2c14ac729af7dc4e0c96",
+          "locator": "line:2",
+          "source": "sshd_config"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-afc045b89bf4c0b148ba81e3",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "SSH-2",
+      "use": "ssh algorithm configuration"
+    },
+    {
+      "algorithm": "ECDH",
+      "asset_id": "asset-ca66be1c8f7e101324f629c2",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:5071bca73f415d09f95d64f8fd009085fbabd3343238a678594a814c33dd3cc9",
+          "locator": "line:5",
+          "source": "nginx.conf"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-b4a08e52a28a89a27da64c16",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "AES-256",
+      "asset_id": "asset-ca66be1c8f7e101324f629c2",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:ae4615484c0e57564583ae0bdfc179b09ebe46f3201cf3f53bae67ebdbee8a8e",
+          "locator": "line:4",
+          "source": "nginx.conf"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-b8a4ed4dcc28ccfc50493154",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": null,
+      "use": "declared cryptographic algorithm"
+    },
+    {
+      "algorithm": "RSA",
+      "asset_id": "asset-9347c11a76402fd349ae57d1",
+      "asset_kind": "configuration",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:ae047e544b1f9e76d5685ce5d154b15ca323bc209244dce6d426c5a5d772c435",
+          "locator": "line:6",
+          "source": "service.yaml"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-f3a8b650e084d8ad5bd98fce",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "TLS",
+      "use": "tls certificate signature"
+    },
+    {
+      "algorithm": "TLS-1.2",
+      "asset_id": "asset-a4daa879d3ed61a0ffcf87c0",
+      "asset_kind": "protocol",
+      "confidentiality_years": 12,
+      "evidence": [
+        {
+          "confidence": 0.82,
+          "detector": "configuration-token",
+          "excerpt_hash": "sha256:ddcd83aab5d41455b5c029758fceb29539ee30ae2a612cb6ed4ebbb8bbb62d20",
+          "locator": "line:3",
+          "source": "nginx.conf"
+        }
+      ],
+      "exposure": "internal",
+      "finding_id": "finding-fbff1b06d57a68c9cb991e3a",
+      "key_bits": null,
+      "library_version": null,
+      "metadata": {},
+      "protocol_version": "TLS-1.2",
+      "use": "transport protocol"
+    }
+  ],
+  "generated_at": "2026-07-13T17:31:08.319819Z",
+  "migration_plan": [
+    {
+      "acceptance_tests": [
+        "Negative test rejects the deprecated algorithm",
+        "Business flow regression passes"
+      ],
+      "action_id": "migration-679d7b2db34ea808cf0818e4",
+      "compatibility_note": "PQC does not compensate for a currently broken or deprecated primitive.",
+      "finding_ids": [
+        "finding-25a28d91fa7ae9352312cb40"
+      ],
+      "phase": "now",
+      "prerequisites": [
+        "Inventory peer compatibility",
+        "Define an emergency rollback window"
+      ],
+      "priority": 100,
+      "rollback": "Restore the prior policy only for a time-bounded, owner-approved exception.",
+      "target": "TLS 1.3 and currently approved classical algorithms",
+      "title": "Remove DES before PQC migration",
+      "transition_kind": "protocol-hardening"
+    },
+    {
+      "acceptance_tests": [
+        "Negative test rejects the deprecated algorithm",
+        "Business flow regression passes"
+      ],
+      "action_id": "migration-dcf871836e519abd6c33e841",
+      "compatibility_note": "PQC does not compensate for a currently broken or deprecated primitive.",
+      "finding_ids": [
+        "finding-59942782605b0fcbdcce0dcc"
+      ],
+      "phase": "now",
+      "prerequisites": [
+        "Inventory peer compatibility",
+        "Define an emergency rollback window"
+      ],
+      "priority": 100,
+      "rollback": "Restore the prior policy only for a time-bounded, owner-approved exception.",
+      "target": "TLS 1.3 and currently approved classical algorithms",
+      "title": "Remove TLS-1.0 before PQC migration",
+      "transition_kind": "protocol-hardening"
+    },
+    {
+      "acceptance_tests": [
+        "Negative test rejects the deprecated algorithm",
+        "Business flow regression passes"
+      ],
+      "action_id": "migration-9f5b6ae2e2db88e355ed71a8",
+      "compatibility_note": "PQC does not compensate for a currently broken or deprecated primitive.",
+      "finding_ids": [
+        "finding-8e11fb768b7a7ca7fcb1f3cd"
+      ],
+      "phase": "now",
+      "prerequisites": [
+        "Inventory peer compatibility",
+        "Define an emergency rollback window"
+      ],
+      "priority": 92,
+      "rollback": "Restore the prior policy only for a time-bounded, owner-approved exception.",
+      "target": "TLS 1.3 and currently approved classical algorithms",
+      "title": "Remove 3DES before PQC migration",
+      "transition_kind": "protocol-hardening"
+    },
+    {
+      "acceptance_tests": [
+        "Classical and PQC components are both transcript-bound",
+        "Downgrade test fails closed"
+      ],
+      "action_id": "migration-d434db3212c7c9b8ec063dce",
+      "compatibility_note": "This is experimental application encapsulation, not TLS negotiation or a claim of standards-track interoperability.",
+      "finding_ids": [
+        "finding-9081e0316f1dba0db126e063"
+      ],
+      "phase": "hybrid-transition",
+      "prerequisites": [
+        "Protocol threat model",
+        "Downgrade binding",
+        "Independent key separation"
+      ],
+      "priority": 75,
+      "rollback": "Negotiate the previous version using an authenticated, audited capability flag.",
+      "target": "Explicit classical + ML-KEM-768 application protocol",
+      "title": "Prototype a versioned hybrid envelope for DH",
+      "transition_kind": "application-encapsulation"
+    },
+    {
+      "acceptance_tests": [
+        "Both signatures bind identical canonical bytes",
+        "Missing required signature fails closed"
+      ],
+      "action_id": "migration-801363fea262d246fe15aca3",
+      "compatibility_note": "The demo's ML-DSA application signature is not an ML-DSA TLS certificate and does not imply JOSE or browser support.",
+      "finding_ids": [
+        "finding-840aec07bc43b39bfd5294a4"
+      ],
+      "phase": "pqc-target",
+      "prerequisites": [
+        "Format and protocol support ML-DSA identifiers",
+        "Trust-anchor and revocation design",
+        "Verifier rollout precedes signer rollout"
+      ],
+      "priority": 67,
+      "rollback": "Continue classical signing while retaining dual-verifier telemetry.",
+      "target": "Versioned dual-verification profile, then ML-DSA-65 after ecosystem approval",
+      "title": "Introduce ML-DSA-65 verification beside RS256",
+      "transition_kind": "signature-transition"
+    },
+    {
+      "acceptance_tests": [
+        "ServerHello key_share group is 0x11ec",
+        "p50/p95 latency and handshake bytes stay within budgets",
+        "Fallback is visible in telemetry"
+      ],
+      "action_id": "migration-6de1b976001fc34ddab65294",
+      "compatibility_note": "True hybrid TLS negotiation is distinct from placing ML-KEM in an application message. No browser compatibility is inferred.",
+      "finding_ids": [
+        "finding-4a662e022abdcc03f0c5b643"
+      ],
+      "phase": "hybrid-transition",
+      "prerequisites": [
+        "OpenSSL 3.5+ on both measured peers",
+        "Per-client compatibility matrix",
+        "Classical fallback policy approved"
+      ],
+      "priority": 65,
+      "rollback": "Return the affected canary to X25519 while preserving collected evidence.",
+      "target": "TLS 1.3 X25519MLKEM768 negotiated key agreement",
+      "title": "Canary true hybrid TLS for ECDH consumers",
+      "transition_kind": "true-hybrid-tls"
+    },
+    {
+      "acceptance_tests": [
+        "Classical and PQC components are both transcript-bound",
+        "Downgrade test fails closed"
+      ],
+      "action_id": "migration-7e79a68bbd4309d01e20b915",
+      "compatibility_note": "This is experimental application encapsulation, not TLS negotiation or a claim of standards-track interoperability.",
+      "finding_ids": [
+        "finding-b4a08e52a28a89a27da64c16"
+      ],
+      "phase": "hybrid-transition",
+      "prerequisites": [
+        "Protocol threat model",
+        "Downgrade binding",
+        "Independent key separation"
+      ],
+      "priority": 65,
+      "rollback": "Negotiate the previous version using an authenticated, audited capability flag.",
+      "target": "Explicit classical + ML-KEM-768 application protocol",
+      "title": "Prototype a versioned hybrid envelope for ECDH",
+      "transition_kind": "application-encapsulation"
+    },
+    {
+      "acceptance_tests": [
+        "Both signatures bind identical canonical bytes",
+        "Missing required signature fails closed"
+      ],
+      "action_id": "migration-2d11506f358bd6e001fbc84c",
+      "compatibility_note": "The demo's ML-DSA application signature is not an ML-DSA TLS certificate and does not imply JOSE or browser support.",
+      "finding_ids": [
+        "finding-f3a8b650e084d8ad5bd98fce"
+      ],
+      "phase": "pqc-target",
+      "prerequisites": [
+        "Format and protocol support ML-DSA identifiers",
+        "Trust-anchor and revocation design",
+        "Verifier rollout precedes signer rollout"
+      ],
+      "priority": 65,
+      "rollback": "Continue classical signing while retaining dual-verifier telemetry.",
+      "target": "Versioned dual-verification profile, then ML-DSA-65 after ecosystem approval",
+      "title": "Introduce ML-DSA-65 verification beside RSA",
+      "transition_kind": "signature-transition"
+    },
+    {
+      "acceptance_tests": [
+        "Both signatures bind identical canonical bytes",
+        "Missing required signature fails closed"
+      ],
+      "action_id": "migration-b11317e8c3fd583ddad4df9b",
+      "compatibility_note": "The demo's ML-DSA application signature is not an ML-DSA TLS certificate and does not imply JOSE or browser support.",
+      "finding_ids": [
+        "finding-afc045b89bf4c0b148ba81e3"
+      ],
+      "phase": "pqc-target",
+      "prerequisites": [
+        "Format and protocol support ML-DSA identifiers",
+        "Trust-anchor and revocation design",
+        "Verifier rollout precedes signer rollout"
+      ],
+      "priority": 65,
+      "rollback": "Continue classical signing while retaining dual-verifier telemetry.",
+      "target": "Versioned dual-verification profile, then ML-DSA-65 after ecosystem approval",
+      "title": "Introduce ML-DSA-65 verification beside RSA",
+      "transition_kind": "signature-transition"
+    },
+    {
+      "acceptance_tests": [
+        "Classical and PQC components are both transcript-bound",
+        "Downgrade test fails closed"
+      ],
+      "action_id": "migration-bbfa14a601cb5801f734b40b",
+      "compatibility_note": "This is experimental application encapsulation, not TLS negotiation or a claim of standards-track interoperability.",
+      "finding_ids": [
+        "finding-4b6595ec18b3af2c5aa83df3"
+      ],
+      "phase": "hybrid-transition",
+      "prerequisites": [
+        "Protocol threat model",
+        "Downgrade binding",
+        "Independent key separation"
+      ],
+      "priority": 62,
+      "rollback": "Negotiate the previous version using an authenticated, audited capability flag.",
+      "target": "Explicit classical + ML-KEM-768 application protocol",
+      "title": "Prototype a versioned hybrid envelope for X25519",
+      "transition_kind": "application-encapsulation"
+    },
+    {
+      "acceptance_tests": [
+        "Both signatures bind identical canonical bytes",
+        "Missing required signature fails closed"
+      ],
+      "action_id": "migration-d4c0b3d15f66568b2fb60d83",
+      "compatibility_note": "The demo's ML-DSA application signature is not an ML-DSA TLS certificate and does not imply JOSE or browser support.",
+      "finding_ids": [
+        "finding-31db6dcfff8c6564c421dfcf"
+      ],
+      "phase": "pqc-target",
+      "prerequisites": [
+        "Format and protocol support ML-DSA identifiers",
+        "Trust-anchor and revocation design",
+        "Verifier rollout precedes signer rollout"
+      ],
+      "priority": 62,
+      "rollback": "Continue classical signing while retaining dual-verifier telemetry.",
+      "target": "Versioned dual-verification profile, then ML-DSA-65 after ecosystem approval",
+      "title": "Introduce ML-DSA-65 verification beside ED25519",
+      "transition_kind": "signature-transition"
+    },
+    {
+      "acceptance_tests": [
+        "Canary success rate is within SLO",
+        "TLS 1.2 fallback population is reported"
+      ],
+      "action_id": "migration-6f09cc1c102bf92185b98e66",
+      "compatibility_note": "This step is standard TLS hardening; it is not post-quantum protection.",
+      "finding_ids": [
+        "finding-220302f11677bb0224d522ef",
+        "finding-fbff1b06d57a68c9cb991e3a"
+      ],
+      "phase": "classic-hardening",
+      "prerequisites": [
+        "Measure TLS 1.3 support by named client population"
+      ],
+      "priority": 42,
+      "rollback": "Retain a scoped TLS 1.2 listener until the incompatible clients are remediated.",
+      "target": "TLS 1.3 with authenticated modern cipher suites",
+      "title": "Prefer TLS 1.3 while preserving a measured TLS 1.2 exception",
+      "transition_kind": "standard-tls"
+    }
+  ],
+  "policy": {
+    "exposure_weights": {
+      "internal": 7,
+      "internet": 16,
+      "local": 0,
+      "partner": 11
+    },
+    "hndl_definition": "Planning flag: quantum-vulnerable data remains confidential beyond the configured transition horizon. It is not a prediction of a cryptographically relevant quantum computer.",
+    "hndl_threshold_years": 5,
+    "minimum_rsa_bits": 2048,
+    "policy_version": "1.0",
+    "severity_thresholds": {
+      "critical": 80,
+      "high": 60,
+      "low": 0,
+      "medium": 35
+    },
+    "transition_target_year": 2030
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "label": "synthetic-inventory-fixture",
+    "type": "local-tree"
+  },
+  "summary": {
+    "algorithm_counts": {
+      "3DES": 1,
+      "AES-128": 1,
+      "AES-256": 2,
+      "DES": 1,
+      "DH": 1,
+      "ECDH": 2,
+      "ED25519": 1,
+      "HS256": 1,
+      "LIBRARY-CRYPTOGRAPHY": 1,
+      "LIBRARY-PYJWT": 1,
+      "ML-DSA-65": 1,
+      "ML-KEM-768": 1,
+      "RS256": 1,
+      "RSA": 2,
+      "TLS-1.0": 1,
+      "TLS-1.2": 2,
+      "X25519": 1,
+      "X25519MLKEM768": 1
+    },
+    "finding_count": 22,
+    "hndl_relevant_count": 8,
+    "migration_action_count": 12,
+    "registry_version": "2026.1",
+    "severity_counts": {
+      "critical": 3,
+      "high": 8,
+      "low": 8,
+      "medium": 3
+    }
+  }
+}

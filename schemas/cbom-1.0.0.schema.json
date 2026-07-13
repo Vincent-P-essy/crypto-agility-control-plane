@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/crypto-agility/cbom-1.0.0.schema.json",
+  "title": "Crypto Bill of Materials 1.0.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "generated_at",
+    "source",
+    "policy",
+    "findings",
+    "assessments",
+    "migration_plan",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "document_id": {
+      "type": "string",
+      "pattern": "^urn:cbom:sha256:[0-9a-f]{64}$"
+    },
+    "generated_at": {"type": "string", "format": "date-time"},
+    "source": {
+      "type": "object",
+      "required": ["type", "label"],
+      "properties": {
+        "type": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "transition_target_year",
+        "hndl_threshold_years",
+        "minimum_rsa_bits",
+        "exposure_weights",
+        "severity_thresholds",
+        "hndl_definition"
+      ],
+      "properties": {
+        "policy_version": {"type": "string"},
+        "transition_target_year": {"type": "integer"},
+        "hndl_threshold_years": {"type": "integer", "minimum": 0},
+        "minimum_rsa_bits": {"type": "integer", "minimum": 0},
+        "exposure_weights": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "severity_thresholds": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "hndl_definition": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/finding"}
+    },
+    "assessments": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/assessment"}
+    },
+    "migration_plan": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/migrationAction"}
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "finding_count",
+        "algorithm_counts",
+        "severity_counts",
+        "hndl_relevant_count",
+        "migration_action_count",
+        "registry_version"
+      ],
+      "properties": {
+        "finding_count": {"type": "integer", "minimum": 0},
+        "algorithm_counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "severity_counts": {
+          "type": "object",
+          "required": ["critical", "high", "medium", "low"],
+          "properties": {
+            "critical": {"type": "integer", "minimum": 0},
+            "high": {"type": "integer", "minimum": 0},
+            "medium": {"type": "integer", "minimum": 0},
+            "low": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        },
+        "hndl_relevant_count": {"type": "integer", "minimum": 0},
+        "migration_action_count": {"type": "integer", "minimum": 0},
+        "registry_version": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["source", "locator", "detector", "excerpt_hash", "confidence"],
+      "properties": {
+        "source": {"type": "string", "minLength": 1},
+        "locator": {"type": "string", "minLength": 1},
+        "detector": {"type": "string", "minLength": 1},
+        "excerpt_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "finding_id",
+        "asset_id",
+        "asset_kind",
+        "algorithm",
+        "use",
+        "key_bits",
+        "protocol_version",
+        "library_version",
+        "exposure",
+        "confidentiality_years",
+        "metadata",
+        "evidence"
+      ],
+      "properties": {
+        "finding_id": {"type": "string", "pattern": "^finding-[0-9a-f]{24}$"},
+        "asset_id": {"type": "string", "pattern": "^asset-[0-9a-f]{24}$"},
+        "asset_kind": {
+          "enum": [
+            "certificate",
+            "key",
+            "jwt",
+            "library",
+            "tls-endpoint",
+            "ssh-endpoint",
+            "configuration",
+            "protocol"
+          ]
+        },
+        "algorithm": {"type": "string", "minLength": 1},
+        "use": {"type": "string", "minLength": 1},
+        "key_bits": {"type": ["integer", "null"], "minimum": 0},
+        "protocol_version": {"type": ["string", "null"]},
+        "library_version": {"type": ["string", "null"]},
+        "exposure": {"enum": ["local", "internal", "partner", "internet"]},
+        "confidentiality_years": {"type": "integer", "minimum": 0, "maximum": 100},
+        "metadata": {"type": "object"},
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/evidence"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "assessment": {
+      "type": "object",
+      "required": [
+        "finding_id",
+        "score",
+        "severity",
+        "hndl_relevant",
+        "confidentiality_end_year",
+        "reasons",
+        "policy_version"
+      ],
+      "properties": {
+        "finding_id": {"type": "string", "pattern": "^finding-[0-9a-f]{24}$"},
+        "score": {"type": "integer", "minimum": 0, "maximum": 100},
+        "severity": {"enum": ["low", "medium", "high", "critical"]},
+        "hndl_relevant": {"type": "boolean"},
+        "confidentiality_end_year": {"type": "integer"},
+        "reasons": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "policy_version": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "migrationAction": {
+      "type": "object",
+      "required": [
+        "action_id",
+        "finding_ids",
+        "phase",
+        "priority",
+        "title",
+        "transition_kind",
+        "target",
+        "prerequisites",
+        "acceptance_tests",
+        "rollback",
+        "compatibility_note"
+      ],
+      "properties": {
+        "action_id": {"type": "string", "pattern": "^migration-[0-9a-f]{24}$"},
+        "finding_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "pattern": "^finding-[0-9a-f]{24}$"}
+        },
+        "phase": {"enum": ["now", "classic-hardening", "hybrid-transition", "pqc-target"]},
+        "priority": {"type": "integer", "minimum": 1, "maximum": 100},
+        "title": {"type": "string", "minLength": 1},
+        "transition_kind": {
+          "enum": [
+            "standard-tls",
+            "true-hybrid-tls",
+            "application-encapsulation",
+            "signature-transition",
+            "protocol-hardening",
+            "inventory-governance"
+          ]
+        },
+        "target": {"type": "string", "minLength": 1},
+        "prerequisites": {"type": "array", "items": {"type": "string"}},
+        "acceptance_tests": {"type": "array", "items": {"type": "string"}},
+        "rollback": {"type": "string", "minLength": 1},
+        "compatibility_note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
