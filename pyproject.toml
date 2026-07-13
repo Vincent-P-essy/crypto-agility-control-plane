@@ -11,7 +11,7 @@ requires-python = ">=3.12,<3.13"
 license = { text = "MIT" }
 authors = [{ name = "Vincent Plessy" }]
 dependencies = [
-  "cryptography>=44,<48",
+  "cryptography>=49.0.0,<50",
   "fastapi>=0.115,<1",
   "pydantic>=2.10,<3",
   "PyYAML>=6,<7",
