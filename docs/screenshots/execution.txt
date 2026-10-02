@@ -1,0 +1,39 @@
+$ crypto-agility scan fixtures --out ./runtime/crypto-example
+{
+  "document_id": "urn:cbom:sha256:7a5a646c25e3f2b8b6b00dc632ae11dc46a655fa1241e06e95b01a962fccc96d",
+  "output_directory": "./runtime/crypto-example",
+  "summary": {
+    "algorithm_counts": {
+      "3DES": 1,
+      "AES-128": 1,
+      "AES-256": 2,
+      "DES": 1,
+      "DH": 1,
+      "ECDH": 2,
+      "ED25519": 1,
+      "HS256": 1,
+      "LIBRARY-CRYPTOGRAPHY": 1,
+      "LIBRARY-PYJWT": 1,
+      "ML-DSA-65": 1,
+      "ML-KEM-768": 1,
+      "RS256": 1,
+      "RSA": 2,
+      "TLS-1.0": 1,
+      "TLS-1.2": 2,
+      "X25519": 1,
+      "X25519MLKEM768": 1
+    },
+    "finding_count": 22,
+    "hndl_relevant_count": 8,
+    "migration_action_count": 12,
+    "registry_version": "2026.1",
+    "severity_counts": {
+      "critical": 3,
+      "high": 2,
+      "low": 8,
+      "medium": 9
+    }
+  }
+}
+
+Exit: 0

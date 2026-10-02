@@ -1,0 +1,7 @@
+[
+  {
+    "command": "crypto-agility scan fixtures --out ./runtime/crypto-example",
+    "exit": 0,
+    "output": "{\n  \"document_id\": \"urn:cbom:sha256:7a5a646c25e3f2b8b6b00dc632ae11dc46a655fa1241e06e95b01a962fccc96d\",\n  \"output_directory\": \"./runtime/crypto-example\",\n  \"summary\": {\n    \"algorithm_counts\": {\n      \"3DES\": 1,\n      \"AES-128\": 1,\n      \"AES-256\": 2,\n      \"DES\": 1,\n      \"DH\": 1,\n      \"ECDH\": 2,\n      \"ED25519\": 1,\n      \"HS256\": 1,\n      \"LIBRARY-CRYPTOGRAPHY\": 1,\n      \"LIBRARY-PYJWT\": 1,\n      \"ML-DSA-65\": 1,\n      \"ML-KEM-768\": 1,\n      \"RS256\": 1,\n      \"RSA\": 2,\n      \"TLS-1.0\": 1,\n      \"TLS-1.2\": 2,\n      \"X25519\": 1,\n      \"X25519MLKEM768\": 1\n    },\n    \"finding_count\": 22,\n    \"hndl_relevant_count\": 8,\n    \"migration_action_count\": 12,\n    \"registry_version\": \"2026.1\",\n    \"severity_counts\": {\n      \"critical\": 3,\n      \"high\": 2,\n      \"low\": 8,\n      \"medium\": 9\n    }\n  }\n}\n"
+  }
+]

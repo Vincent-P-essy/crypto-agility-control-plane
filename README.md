@@ -15,6 +15,12 @@ The project is deliberately strict about terminology:
 If OpenSSL 3.5 or the exact native liboqs build is missing, the benchmark stops. It never
 substitutes simulated timings or hard-coded numbers.
 
+## Execution preview
+
+![crypto-agility-control-plane execution](docs/screenshots/execution.png)
+
+Local execution of `crypto-agility scan fixtures --out ./runtime/crypto-example`. The input and output shown come from the repository example or test fixtures. [Verification](docs/verification.md).
+
 ## What is implemented
 
 - bounded, symlink-safe inventory of TLS, SSH, JWT headers, PEM certificates and keys,
